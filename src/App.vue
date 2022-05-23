@@ -21,7 +21,7 @@
             ></router-link> 
           </li>
           <li class="nav-item">
-           <router-link to="/about"><a class="nav-link" href="#">Kitchen</a></router-link> 
+           <router-link to="/kitchen"><a class="nav-link" href="#">Kitchen</a></router-link> 
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Bedroom</a>
@@ -168,6 +168,12 @@
   text-align: center;
   color: #2c3e50;
 }
+
+.float-left {
+  float: left;
+}
+
+
 
 
 </style>
