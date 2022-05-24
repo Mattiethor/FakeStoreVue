@@ -32,8 +32,10 @@
         </ul>
       </div>
     </nav>
+    <div class="container">
     <!-- Navbar end -->
     <router-view />
+    </div>
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
@@ -172,6 +174,14 @@
 .float-left {
   float: left;
 }
+
+ .product-img{
+  
+  height: 230px;
+  width: 250px;
+
+}
+
 
 
 
