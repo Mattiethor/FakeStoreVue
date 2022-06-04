@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-     <router-link to ="/"><a class="navbar-brand" href="#">FakeStore</a></router-link> 
+      <router-link to="/"
+        ><a class="navbar-brand" href="#">FakeStore</a></router-link
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -16,12 +18,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-           <router-link to ="/"><a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            ></router-link> 
+            <router-link to="/"
+              ><a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              ></router-link
+            >
           </li>
           <li class="nav-item">
-           <router-link to="/kitchen"><a class="nav-link" href="#">Kitchen</a></router-link> 
+            <router-link to="/kitchen"
+              ><a class="nav-link" href="#">Kitchen</a></router-link
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Bedroom</a>
@@ -33,8 +39,8 @@
       </div>
     </nav>
     <div class="container">
-    <!-- Navbar end -->
-    <router-view />
+      <!-- Navbar end -->
+      <router-view />
     </div>
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
@@ -175,15 +181,8 @@
   float: left;
 }
 
- .product-img{
-  
+.product-img {
   height: 230px;
   width: 250px;
-
 }
-
-
-
-
-
 </style>

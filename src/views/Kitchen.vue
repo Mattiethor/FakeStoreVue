@@ -14,16 +14,19 @@
 
             <h5>{{ item.name }}</h5>
             <br />
+             <h4> <strong>{{ item.listPrice }}$</strong></h4>
             <router-link to="/product"
               ><button
                 @click="setProductUrl(item.id)"
                 type="button"
                 class="btn btn-primary"
               >
-                Primary
+                INFO
               </button></router-link
             >
-            {{ item.listPrice }}$
+           
+           
+            
             <hr />
           </div>
         </div>
@@ -35,7 +38,7 @@
 import axios from "axios";
 
 export default {
-  props: ["this.productUrl"],
+  
   data: () => ({
     productUrl: undefined,
     products: [],
@@ -43,8 +46,9 @@ export default {
 
   methods: {
     setProductUrl(product) {
-      this.productUrl = this.$store.getters.getUrl + "/" + product;
-      console.log(this.productUrl);
+      this.$store.commit("SET_PRODUCT", product)
+
+      
     },
   },
 
