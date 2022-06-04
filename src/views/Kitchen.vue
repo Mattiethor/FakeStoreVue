@@ -8,12 +8,22 @@
           :key="index"
         >
           <div class="m-2 product-box">
-            <div >
-              <img  class=" product-img" :src="item.imgUrl" :alt="item.name" />
+            <div>
+              <img class="product-img" :src="item.imgUrl" :alt="item.name" />
             </div>
-            
-            <h5>{{ item.name }} </h5> <br/>
-            <button type="button" class="btn btn-primary">Primary</button> {{item.listPrice}}$
+
+            <h5>{{ item.name }}</h5>
+            <br />
+            <router-link to="/product"
+              ><button
+                @click="setProductUrl(item.id)"
+                type="button"
+                class="btn btn-primary"
+              >
+                Primary
+              </button></router-link
+            >
+            {{ item.listPrice }}$
             <hr />
           </div>
         </div>
@@ -23,15 +33,24 @@
 </template>
 <script>
 import axios from "axios";
+
 export default {
+  props: ["this.productUrl"],
   data: () => ({
-    url: "https://localhost:7135/api/products",
+    productUrl: undefined,
     products: [],
   }),
 
+  methods: {
+    setProductUrl(product) {
+      this.productUrl = this.$store.getters.getUrl + "/" + product;
+      console.log(this.productUrl);
+    },
+  },
+
   mounted() {
-    axios.defaults.baseURL = "//localhost:7135/";
-    axios.get(this.url).then((response) => {
+    axios.defaults.baseURL = this.$store.getters.getUrl;
+    axios.get(this.$store.getters.getUrl).then((response) => {
       this.products = response.data;
       console.log(response.data);
     });
