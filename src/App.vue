@@ -25,15 +25,17 @@
             >
           </li>
           <li class="nav-item">
-            <router-link to="/kitchen"
-              ><a class="nav-link" href="#">Kitchen</a></router-link
+            <router-link to="/category"
+              ><a @click="setCaregory('1'); setUrl()" class="nav-link" href="#">Summer</a></router-link
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Bedroom</a>
+            <router-link to="/category"><a @click="setCaregory('2'); setUrl() " class="nav-link" href="#">Bedroom</a></router-link>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Summer</a>
+            <router-link to="/category"><a @click="setCaregory('3'); setUrl() " class="nav-link" href="#">Living Room</a></router-link>
+            
           </li>
         </ul>
       </div>
@@ -167,6 +169,39 @@
     <!-- Footer -->
   </div>
 </template>
+<script>
+  export default {
+    data: () => ({
+    category: undefined,
+    
+  }),
+
+  computed:{
+    
+     setUrl(){
+       return this.$store.commit("SET_CATEGORY", this.category);
+      },
+      
+
+  },
+
+    methods:{
+      setCaregory(category){
+        this.category = category
+        
+       return this.$store.commit("SET_CATEGORY", category);
+        
+        
+      },
+      
+     
+    },
+    
+  
+  }
+
+</script>
+
 
 <style>
 #app {
