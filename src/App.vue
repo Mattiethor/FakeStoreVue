@@ -25,22 +25,22 @@
             >
           </li>
           <li class="nav-item">
-            <router-link to="/category"
-              ><a @click="setCaregory('1'); setUrl()" class="nav-link" href="#">Summer</a></router-link
+            <router-link to="/summer"
+              ><a @click="setCaregory('1')" class="nav-link" href="#">Summer</a></router-link
             >
           </li>
           <li class="nav-item">
-            <router-link to="/category"><a @click="setCaregory('2'); setUrl() " class="nav-link" href="#">Bedroom</a></router-link>
+            <router-link to="/bedroom"><a @click="setCaregory('2') " class="nav-link" href="#">Bedroom</a></router-link>
             
           </li>
           <li class="nav-item">
-            <router-link to="/category"><a @click="setCaregory('3'); setUrl() " class="nav-link" href="#">Living Room</a></router-link>
+            <router-link to="/livingRoom"><a @click="setCaregory('3') " class="nav-link" href="#">Living Room</a></router-link>
             
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container">
+    <div class="container-fluid">
       <!-- Navbar end -->
       <router-view />
     </div>
@@ -176,28 +176,19 @@
     
   }),
 
-  computed:{
-    
-     setUrl(){
-       return this.$store.commit("SET_CATEGORY", this.category);
-      },
-      
-
-  },
+  
 
     methods:{
       setCaregory(category){
         this.category = category
         
        return this.$store.commit("SET_CATEGORY", category);
-        
+    
         
       },
-      
-     
+    
     },
     
-  
   }
 
 </script>
@@ -205,7 +196,7 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -219,5 +210,8 @@
 .product-img {
   height: 230px;
   width: 250px;
+  margin: 15px;
+  padding: 10px;
 }
+
 </style>

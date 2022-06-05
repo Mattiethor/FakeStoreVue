@@ -13,6 +13,9 @@
           <div class="description">
             {{ product.description }}
           </div>
+          <hr>
+          <p>Model: {{product.modelYear}}</p>
+          <h5>{{product.listPrice}} $</h5>
           <br />
           <button
             @click="setProductUrl(item.id)"
@@ -52,4 +55,6 @@ export default {
 .description {
   font-size: 24px;
 }
+
+
 </style>

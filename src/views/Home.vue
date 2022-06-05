@@ -1,24 +1,40 @@
 <template>
   <div class="home">
-    <div class="container">
+    <div class="hero-image-container">
       <div class="row">
-        <div class="col-md-8">
+        
+        <div class="col-md-4">
           <img
             src="https://media.istockphoto.com/photos/garden-patio-decorated-with-scandinavian-wicker-sofa-and-coffee-table-picture-id1208657520"
             class="img-fluid"
             alt="Responsive image"
+            
           />
+          
+        </div>
+        
+
+        <div class="col-md-4">
+          <img
+            src="https://media.istockphoto.com/photos/yellow-living-room-with-sofa-picture-id1133601992"
+            class="img-fluid"
+            alt="Responsive image"
+            
+          />
+          
         </div>
         <div class="col-md-4">
-          <h2>Our motto</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
-            quisquam iste laudantium minima officiis sint? Corrupti nemo
-            perspiciatis quia? Itaque corporis laudantium ratione quam sit
-            voluptatum neque, exercitationem reprehenderit harum.
-          </p>
+          <div>
+            <h3>Welcome to FakeStore</h3>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor quod aliquid odio perferendis provident tempora quas voluptatibus obcaecati enim. Tempore magnam atque veniam. Quia soluta quasi sit distinctio obcaecati.</h5>
+            <br>
+            <p>-The Emmployees of FakeStore</p>
+          </div>
+          
         </div>
+        
       </div>
+      <hr>
       <div class="row">
         <div class="col-md-4">
           <img
@@ -42,7 +58,8 @@
           />
         </div>
       </div>
-    </div>
+      </div>
+    
   </div>
 </template>
 
@@ -58,3 +75,8 @@ export default {
 };
 
 </script>
+
+<style>
+
+
+</style>
